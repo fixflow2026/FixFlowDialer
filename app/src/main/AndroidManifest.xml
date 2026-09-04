@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Call log padhne ke liye -->
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <!-- Contact ka naam nikalne ke liye -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- Directly call karne ke liye (optional, detail screen se) -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="FixFlow Dialer"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CallHistoryDialer">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".CallDetailActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
